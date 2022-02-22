@@ -1,9 +1,9 @@
 package com.company;
 
 public class Complex {
-    double realPart;
-    double imagePart;
-    public Complex(double real,double image){
+    private double realPart;
+    private double imagePart;
+    private Complex(double real,double image){
         realPart = real;
         imagePart = image;
     }
@@ -30,20 +30,20 @@ public class Complex {
                 return realPart + "-" + (-imagePart) + "i";
         }
     }
-    public void plus(double real, double image){
+    private void plus(double real, double image){
         realPart+=real;
         imagePart+=image;
     }
-    public void minus(double real,double image){
+    private void minus(double real,double image){
         realPart-=real;
         imagePart-=image;
     }
-    public void multiply(double real,double image){
+    private void multiply(double real,double image){
         double firstPart = realPart;
         realPart = realPart*real-imagePart*image;
         imagePart = firstPart*image+real*imagePart;
     }
-    public void divide(double real, double image){
+    private void divide(double real, double image){
         double wholePart = realPart*real - (imagePart*(-image));
         double denominator=(real*real)+(image*image);
         double complexPart = (imagePart*real)+(realPart*(-image));
