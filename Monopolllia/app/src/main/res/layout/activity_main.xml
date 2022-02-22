@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#333"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Монополия"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mono"
+        android:layout_marginTop="-174dp"
+        app:srcCompat="@drawable/monopoliaf"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+    <TextView
+        android:id="@+id/ahtung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kubiki"
+        android:layout_marginTop="-15dp"
+        android:text="Вы бросили кубик"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ahtung"
+        android:layout_marginHorizontal="150dp"
+        android:layout_marginTop="-20dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#00BCD4"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/raz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/counter"
+        android:layout_marginTop="-15dp"
+        android:text="раз"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp" />
+
+    <ImageView
+        android:id="@+id/kubiki"
+        android:layout_width="118dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/mono"
+        android:layout_marginHorizontal="150dp"
+        android:layout_marginTop="440dp"
+        app:srcCompat="@drawable/kubiki" />
+
+</RelativeLayout>
