@@ -1,55 +1,55 @@
 package com.company;
 
 public class Complex {
-    double real_part;
-    double image_part;
+    double realPart;
+    double imagePart;
     public Complex(double real,double image){
-        real_part = real;
-        image_part = image;
+        realPart = real;
+        imagePart = image;
     }
     @Override
     public String toString(){
-        if (real_part%1==0 && image_part%1==0 ){
-            if (real_part==0 && image_part!=0)
-                return (int)image_part + "i";
-            else if (real_part!=0 && image_part==0)
-                return Integer.toString((int)real_part);
-            else if (image_part>0)
-                return (int)real_part + "+" + (int)image_part + "i";
+        if (realPart%1==0 && imagePart%1==0 ){
+            if (realPart==0 && imagePart!=0)
+                return (int)imagePart + "i";
+            else if (realPart!=0 && imagePart==0)
+                return Integer.toString((int)realPart);
+            else if (imagePart>0)
+                return (int)realPart + "+" + (int)imagePart + "i";
             else
-                return (int)real_part + "-" + (-(int)image_part) + "i";
+                return (int)realPart + "-" + (-(int)imagePart) + "i";
         }
         else{
-            if (real_part==0 && image_part!=0)
-                return image_part + "i";
-            else if (real_part!=0 && image_part==0)
-                return Double.toString(real_part);
-            else if (image_part>0)
-                return real_part + "+" + image_part + "i";
+            if (realPart==0 && imagePart!=0)
+                return imagePart + "i";
+            else if (realPart!=0 && imagePart==0)
+                return Double.toString(realPart);
+            else if (imagePart>0)
+                return realPart + "+" + imagePart + "i";
             else
-                return real_part + "-" + (-image_part) + "i";
+                return realPart + "-" + (-imagePart) + "i";
         }
     }
     public void plus(double real, double image){
-        real_part+=real;
-        image_part+=image;
+        realPart+=real;
+        imagePart+=image;
     }
     public void minus(double real,double image){
-        real_part-=real;
-        image_part-=image;
+        realPart-=real;
+        imagePart-=image;
     }
     public void multiply(double real,double image){
-        double first_part = real_part;
-        real_part = real_part*real-image_part*image;
-        image_part = first_part*image+real*image_part;
+        double firstPart = realPart;
+        realPart = realPart*real-imagePart*image;
+        imagePart = firstPart*image+real*imagePart;
     }
     public void divide(double real, double image){
-        double whole_part = real_part*real - (image_part*(-image));
+        double wholePart = realPart*real - (imagePart*(-image));
         double denominator=(real*real)+(image*image);
-        double complex_part = (image_part*real)+(real_part*(-image));
-        whole_part /= denominator;
-        complex_part /= denominator;
-        real_part = whole_part;
-        image_part = complex_part;
+        double complexPart = (imagePart*real)+(realPart*(-image));
+        wholePart /= denominator;
+        complexPart /= denominator;
+        realPart = wholePart;
+        imagePart = complexPart;
     }
 }
